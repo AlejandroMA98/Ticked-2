@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    {{>head}}
+  </head>
+  <body>
+    {{>navigation}}
+
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-8">
+          {{{ body  }}} 
+        </div>
+        <div class="col-md-4">
+          {{>stats this}}
+          {{>popular this}}
+          {{>comments this}}
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background-color: rgb(59, 59, 59); " class=" text-white">
+      <div class="container p-2" style="margin-top: 2rem;">
+        <div class="row">
+          <div class="mx-auto text-center">
+            <p style="color: rgb(63, 223, 0);">BookFace | &copy; Copyright {{getCurrentYear}}, All rights reserved</p>
+            <p>
+              <a style="color: rgb(63, 223, 0); " href="https://www.facebook.com/edward.hardy.520"><i class="fab fa-facebook-square fa-3x"></i></a>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    {{>footer}}
+    <script src="/public/js/scripts.js"></script>
+  </body>
+</html>
